@@ -1,0 +1,47 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width">
+  <style>
+table,
+th,
+td,
+div {
+  font-family: Arial;
+  padding: 1em;
+  border-style: solid;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.spl {
+  writing-mode: vertical-rl;
+  border-style: none;
+}
+
+.inb {
+  background-color: #ddd;
+}  
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td>one</td>
+      <td>two</td>
+      <td>three</td>
+    </tr>
+    <tr>
+      <td rowspan="2" class="inb">
+        <div class="spl">four</div>
+      </td>
+
+      <td>five</td>
+      <td>six</td>
+    </tr>
+    <tr>
+      <td>seven</td>
+      <td>eight</td>
+    </tr>
+  </table>
+</body>
+</html>
