@@ -1,46 +1,141 @@
-<html>
-<head>
-  <meta name="viewport" content="width=device-width">
-  <style>
-table, th, td, div {
-  font-family: Arial;
-  padding: 1em;
-  border-style: solid;
-  border-collapse: collapse;
-  text-align: center;
-  vertical-align: middle;
-}
-div {
-  writing-mode: vertical-rl;
-  
-  background-color: #ddd;
-  border-color: #bbb;
-   
-  height: calc(100% + 2em);
-  margin: -1em; 
-  width: calc(100% + 2em); 
-  box-sizing:border-box;
-}
-
-table,tbody,tr, td {
-  height:0;
-}
-
-  </style>
-</head>
-<body>
-  <table>
-    <tr>
-      <td>one</td> <td>two</td> <td>three</td>
-    </tr>
-    <tr>
-      <td rowspan="2"> <div>four</div> </td>
-
-      <td>five</td> <td>six</td>
-    </tr>
-    <tr>
-      <td>seven</td> <td>eight</td>
-    </tr>  
-  </table>
-</body>
+<!DOCTYPE html>
+<html ontouchmove>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    
+    <link rel="stylesheet" href="css/base.css">
+  </head>
+  <body>
+    <h1>sandbox</h1>
+    <h2>basic divs and spans</h2>   
+    <div>
+      <p>div <span>span</span><br>box</p>
+    </div>
+    
+    <h2>tables</h2>   
+    <div class="table_wrapper">
+      <table>
+        <caption>table</caption>
+        <thead>
+          <tr><th>one</th><th>two</th><th>three</th><th>four</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>five</td><td>six</td><td>seven</td><td>eight</td></tr>  
+          <tr><td>nine</td><td>ten</td><td>eleven</td><td>twelve</td></tr>   
+          <tr>
+            <td>thirteen</td><td>fourteen</td><td>fifteen</td><td>sixteen</td>
+          </tr>   
+          <tr>
+            <td>seventeen</td><td>eighteen</td><td>ninteen</td><td>twenty</td>
+          </tr>          
+        </tbody>    
+        <tfoot>
+          <tr>
+            <td>twenty one</td><td>twenty two</td>
+            <td>twenty three</td><td>twenty four</td>
+          </tr>             
+        </tfoot>
+      </table>
+    </div>
+    
+    <h2>navigation</h2> 
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <p>one</p>        
+            <div>
+              <p>one</p><p>two</p><p>three</p><p>four</p><p>five</p>
+            </div>
+          </li>
+          <li>
+            <p>two</p>        
+            <div>
+              <p>one</p><p>two</p><p>three</p><p>four</p><p>five</p>
+            </div>
+          </li>
+          <li>
+            <p>three</p>        
+            <div>
+              <p>one</p><p>two</p><p>three</p><p>four</p><p>five</p>
+            </div>
+          </li>  
+          <li>
+            <p>four</p>        
+            <div>
+              <p>one</p><p>two</p><p>three</p><p>four</p><p>five</p>
+            </div>
+          </li>
+          <li>
+            <p>five</p>        
+            <div>
+              <p>one</p><p>two</p><p>three</p><p>four</p><p>five</p>
+            </div>
+          </li>          
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <h3>images</h3>
+      <img src="img/bear.jpg">
+    </main>
+    
+    <footer>
+      <h2>toggle</h2>
+      <div class="tog">
+        <input type="checkbox" id="tog">
+        <label for="tog">
+          <div></div>
+        </label>
+      </div>
+      
+      <h2>rowspan and colspan</h2>
+      <div class="table_wrapper2">
+        <table>
+          <tr>
+            <td>one</td><td>two</td><td>three</td>
+          </tr>
+          <tr>
+            <td rowspan="2">four</td><td>five</td><td>six</td>
+          </tr>
+          <tr>
+            <td>seven</td><td>eight</td>
+          </tr>
+          <tr>
+            <td>nine</td><td>ten</td><td>eleven</td>
+          </tr>          
+          <tr>
+            <td>twelve</td><td>thirteen</td><td>fourteen</td>
+          </tr>
+          <tr>
+            <td colspan="3">fifteen</td>
+          </tr>          
+        </table>
+      </div>
+      
+      <h2>float nav and box shadow</h2>
+      <nav class="nav2">
+        <ul class="float">
+          <li><a href="#1">one</a></li>
+          <li><a href="#2">two</a></li>
+          <li><a href="#3">three</a></li>
+          <li><a href="#4">four</a></li>
+        </ul>
+      </nav>
+      
+      <h2>white space &amp; writing mode</h2>
+      <p class="pre">
+        html
+          head
+            meta 
+            link
+        <span>body</span>
+      </p>
+      
+      <h2>animation &amp; calc</h2>
+      <div class="ball slide"></div>
+    </footer>
+  </body>
 </html>
