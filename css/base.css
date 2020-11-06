@@ -1,0 +1,366 @@
+::selection {
+  background-color: #0dd;
+  color: #9dd;
+}
+* {
+  box-sizing: content-box;
+}
+html {
+  font-family: Arial;
+  text-transform: capitalize;
+  overflow: auto;
+}
+html, body, h1, h2, p {
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.25rem;
+}
+div:nth-of-type( 1 ){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0.5rem;
+  background-color: #222;
+  color: #eee;
+  font-size: 0.75rem;
+  text-align: center;
+}
+span {
+  color: #b37;
+}
+.table_wrapper {
+  padding: 2rem;
+  padding-top: 1rem;
+  background-color: #333;
+  background-image: linear-gradient( 225deg, #c4e, #54e );
+}
+.table_wrapper table {
+  max-width: 30rem;
+}
+.table_wrapper table, .table_wrapper th, .table_wrapper td {
+  padding: 1rem;
+  text-align: center;
+  border-spacing: 0;
+}
+caption {
+  color: #334;
+}
+thead th:nth-of-type( 1 ) {
+  border-top-left-radius: 1rem;
+}
+thead th:nth-of-type( 4 ) {
+  border-top-right-radius: 1rem;
+}
+thead th {
+  background-color: #335;
+  color: #eee;
+  font-weight: normal;
+}
+.table_wrapper tbody {
+  background-color: #eee;
+}
+.table_wrapper tr {
+  transition-property: font;
+  transition-duration: 1s;
+}
+.table_wrapper tr:hover {
+  color: #222;
+  text-shadow:
+  -0.01251em -0.01251em 0 #222,
+  0.01251em -0.01251em 0 #222,
+  -0.01251em 0.01251em 0 #222,
+  0.01251em 0.01251em 0 #222;
+  transition: all .5s;
+}
+.table_wrapper tr:hover th {
+  color: #fff;
+  text-shadow:
+  -0.01251em -0.01251em 0 #fff,
+  0.01251em -0.01251em 0 #fff,
+  -0.01251em 0.01251em 0 #fff,
+  0.01251em 0.01251em 0 #fff;
+  transition: all .5s;
+}
+.table_wrapper tr:nth-of-type( 2n ) {
+  background-color: #ddd;
+}
+tfoot {
+  background-color: #eee;
+}
+tfoot td:nth-of-type( 1 ) {
+  border-bottom-left-radius: 1rem;
+}
+tfoot td:nth-of-type( 4 ) {
+  border-bottom-right-radius: 1rem;
+}
+.table_wrapper td, .table_wrapper th {
+  position: relative;
+}
+.table_wrapper td::after, .table_wrapper th::after {
+/*  transform: scaleY( 1.025 ) scaleX( 1.145 );*/
+  opacity: 0;
+  transition: opacity;
+  transition-duration: 0.5s;
+  content: "";
+  pointer-events: none;
+}
+td:hover::after, th:hover::after {
+  width: 98%;
+  height: 20.125rem;
+  position: absolute;
+  top: -3.25rem;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  border-style: solid;
+  border-color: #000;
+  border-radius: 1rem;
+  opacity: 0.125;
+}
+th:hover::after {
+  top: 0;
+}
+tr:nth-of-type( 2 ) td:hover::after {
+  top: -6.4rem;
+}
+tr:nth-of-type( 3 ) td:hover::after {
+  top: -9.55rem;
+}
+tr:nth-of-type( 4 ) td:hover::after {
+  top: -12.7rem;
+}
+tfoot td:hover::after {
+  top: -15.88rem;
+}
+header {
+  color: #eee;
+}
+nav {
+  background-color: #222;
+}
+ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+li {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 1rem;
+  margin-right: 0.25rem;
+  width: 100%;
+  list-style-type: none;
+  background-color: #333;
+  cursor: pointer;
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+}
+li:last-child {
+  margin: 0;
+}
+li:hover {
+  background-color: #444;
+  color: #ddd;
+}
+li:active {
+  background-color: #555;
+  transition-duration: 0.125s;
+}
+li div p {
+  padding: 0.1rem;
+  margin: 0.1rem;
+  width: 2rem;
+  font-size: 1rem;
+  text-align: left;
+}
+li div p:hover {
+  color: #fff;
+  font-weight: bold;
+}
+li div:nth-of-type( 1 ) {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 3.125rem;
+  width: 100%;
+  height: 10em;
+  padding: 0.5rem;
+  color: #ccc;
+}
+li:nth-of-type( 5 ) div:nth-of-type( 1 ) {
+  width: 75%;
+}
+li:hover div {
+  display: flex;
+}
+img {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+footer {
+  margin: 1rem;
+}
+footer div:nth-of-type( 1 ) {
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  background-color: #eee;
+  color: #222;
+}
+label, label div:nth-of-type( 1 ) {
+  height: 4rem;
+  border-radius: 2rem;
+}
+label {
+  display: block;
+  position: relative;
+  width: 7rem;
+  background-color: #444;
+  transition-property: background-color;
+  transition-duration: 1s;
+}
+label div:nth-of-type( 1 ) {
+  position: absolute;
+  left: 0;
+  transform: scale( 0.8 );
+  width: 4rem;
+  padding: 0;
+  background-color: #222;
+  transition-property: left;
+  transition-duration: 0.25s;
+}
+:checked + label {
+  background-color: #aaa;
+}
+:checked ~ label div:nth-of-type( 1 ) {
+  left: 3rem;
+  background-color: #333;
+}
+label div:nth-of-type( 1 ):hover {
+  background-color: #000;
+}
+#tog {
+  display: none;
+}
+.table_wrapper2 {
+  padding: 2rem;
+  background-color: #5bb;
+}
+.table_wrapper2 > table {
+  width: 100%;
+  background-color: #242e38;
+  color: #eee;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.table_wrapper2 td {
+  width: 33.333%;
+  padding: 1rem;
+  border-color: #2c3844;
+  border-style: solid;
+}
+.table_wrapper2 tr:nth-of-type( 2n + 1 ){
+  background-color: #2c3844;
+}
+.table_wrapper2 tbody tr:nth-of-type( 1 ){
+  background-color: #202832;
+  color: #fff;
+}
+.table_wrapper2 [ rowspan ] {
+  background-color: #242e38;
+}
+[ rowspan ], [ colspan ] {
+  text-align: center;
+}
+.float {
+  display: block;
+  background-color: #222;
+}
+.float::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.float li {
+  display: block;
+  width: auto;
+  float: left;
+}
+.float li:nth-of-type( 1 ) {
+  outline-style: solid;
+  outline-width: 0.125rem;
+  outline-color: #099;
+  outline-offset: 0.0625rem;
+}
+.float li:nth-of-type( 2 )::before{
+  content: "2"
+}
+.float li:nth-of-type( 3 ) {
+  font-weight: bold;
+  letter-spacing: 1rem;
+}
+a {
+  color: #ddd;
+  text-decoration: none;
+  list-style-type: none;
+}
+a:visited {
+  color: #aaa;
+}
+.nav2 {
+  position: relative;
+  right: -0.25rem;
+  bottom: -0.25rem;
+  z-index: 10;
+  box-shadow: 0.25rem 0.25rem 1rem 0.125rem #222;
+}
+footer h2:nth-of-type( 2 ) {
+  word-spacing: 1rem;
+  line-height: 2rem;
+}
+.pre {
+  white-space: pre;
+}
+.pre span {
+  color: #222;
+  writing-mode: vertical-rl;
+}
+.ball {
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  background-color: #222;
+  border-radius: 0.5rem;
+}
+.slide {
+  animation-name: slide;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: calc( 10rem + 50% );
+  }
+  100% {
+    left: 0;
+  }
+}
+@media( min-width: 31rem ){
+  html {
+    font-size: 3.25vmin;
+  }
+}
